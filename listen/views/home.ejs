@@ -1,0 +1,113 @@
+<% layout('layouts/boilerplate') %> <% let i=0 %>
+<h1>Knowledge</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% for(let pod of podcasts){ %> <% if(pod.category=="Knowledge"){%> <%
+  if(i%3==0){%>
+  <div class="col">
+    <% } %>
+    <div class="card h-100">
+      <a href="/home/<%=pod._id%>">
+        <img
+          src="https://res.cloudinary.com/duqzhu4b9/image/upload/v1681143921/YelpCamp/mmhd48iect6f26rdbuou.jpg"
+          class="card-img-top"
+          alt="Skyscrapers"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><%= pod.name %></h5>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">By <%= pod.speaker %></small>
+      </div>
+    </div>
+
+    <% if(i%3==0) {%>
+  </div>
+  <% } %> <% i=i+1 %> <% } %> <%} %>
+</div>
+<h1>Health and wellness</h1>
+
+<% i=0 %>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% for(let pod of podcasts){ %> <% if(pod.category=="Health and wellness"){%>
+  <% if(i%3==0){%>
+  <div class="col">
+    <% } %>
+    <div class="card h-100">
+      <a href="/home/<%=pod._id%>">
+        <img
+          src="https://res.cloudinary.com/duqzhu4b9/image/upload/v1681143921/YelpCamp/mmhd48iect6f26rdbuou.jpg"
+          class="card-img-top"
+          alt="Skyscrapers"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><%= pod.name %></h5>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><%= pod.speaker %></small>
+      </div>
+    </div>
+    <% if(i%3==0) {%>
+  </div>
+  <% } %> <% i=i+1 %> <% } %> <%} %>
+</div>
+
+<h1>Crime and Thriller</h1>
+
+<% i=0 %>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% for(let pod of podcasts){ %> <% if(pod.category=="Crime and Thriller"){%>
+  <% if(i%3==0){%>
+  <div class="col">
+    <% } %>
+    <div class="card h-100">
+      <a href="/home/<%=pod._id%>">
+        <img
+          src="https://res.cloudinary.com/duqzhu4b9/image/upload/v1681143921/YelpCamp/mmhd48iect6f26rdbuou.jpg"
+          class="card-img-top"
+          alt="Skyscrapers"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><%= pod.name %></h5>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><%= pod.speaker %></small>
+      </div>
+    </div>
+    <% if(i%3==0) {%>
+  </div>
+  <% } %> <% i=i+1 %> <% } %> <%} %>
+</div>
+
+<h1>Comedy</h1>
+
+<% i=0 %>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% for(let pod of podcasts){ %> <% if(pod.category=="Comedy"){%> <%
+  if(i%3==0){%>
+  <div class="col">
+    <% } %>
+    <div class="card h-100">
+      <a href="/home/<%=pod._id%>">
+        <img
+          src="https://res.cloudinary.com/duqzhu4b9/image/upload/v1681143921/YelpCamp/mmhd48iect6f26rdbuou.jpg"
+          class="card-img-top"
+          alt="Skyscrapers"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><%= pod.name %></h5>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><%= pod.speaker %></small>
+      </div>
+    </div>
+    <% if(i%3==0) {%>
+  </div>
+  <% } %> <% i=i+1 %> <% } %> <%} %>
+</div>

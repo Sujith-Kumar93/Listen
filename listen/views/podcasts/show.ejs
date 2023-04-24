@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="d-flex row">
+        <div class="col-6 offset-3">
+      <div class="card h-100">
+          
+        <div class="card-body">
+          <h5 class="card-title"><%= pod.name %></h5>
+          <p class><%= pod.description %></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">By <%= pod.speaker %></small>
+          <form id="form" method="POST" action="/home/<%= pod._id %>/favourite">
+              <div class="form-check form-check-reverse">
+                <input type="checkbox" name="num" onchange="$('#form').submit();"  name="checkbox" id="reverseCheck1" class="form-check-input"/>        
+              </div>              
+            <label class="form-check-label" for="reverseCheck1">
+                  Mark as favourite
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+      <p><a href="/home/<%=pod._id%>/edit">Edit</a></p>
+    <p>
+      <form action="/home/<%= pod._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-success">Delete</button>
+      </form>
+    </p>
+    
+    <div>
+      <a href="/home">All Podcasts</a>
+    </div>
+    </div>
+
+    
